@@ -1,0 +1,25 @@
+<h1>Dragon Ball</h1>
+<dl>
+  <td>Nombre:</td>
+  <dd>{{ nombre }}</dd>
+
+  <td>Edad:</td>
+  <dd>{{ edad }}</dd>
+
+  <td>Método:</td>
+  <dd>{{ getDescripcionHeroe() }}</dd>
+
+  <td>Capitalizado:</td>
+  <dd>{{ nombreCapitalizado }}</dd>
+
+  <button *ngIf="nombre !== 'Vegeta'" class="btn btn-primary mx-2" (click)="cambiaNombre()">
+    Cambiar nombre
+  </button>
+  <button *ngIf="edad !== 40" class="btn btn-danger mx-2" (click)="cambiaEdad()">
+    Cambiar edad
+  </button>
+  <button class="btn btn-danger" (click)="restablecerFormulario()">
+    Restablecer
+  </button>
+
+</dl>
